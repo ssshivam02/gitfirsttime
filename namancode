@@ -1,0 +1,21 @@
+code:-
+def func(doc_list,keyword):
+    k= keyword
+    s= list(map(str,doc_list.split()))
+    a=[]
+    for i in s:
+        if i[-1]=="." and i[:-1]==k:
+            a.append(i)
+        elif k in i and k!=i:
+            continue
+        elif i.lower()==k or i.upper()==k:
+            a.append(i)
+        else:
+            a.append(i)
+    return " ".join(a)
+    
+print(func("shivam is Shivams is good shivam.","shivam"))
+
+#########################################################
+output:-
+shivam is Shivams is good shivam.    
